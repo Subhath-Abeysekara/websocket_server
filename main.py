@@ -9,8 +9,8 @@ async def handle_client(websocket, path):
             await websocket.send(f"Received your message: {message}")
     except websockets.exceptions.ConnectionClosedOK:
         print("Client disconnected")
-
-start_server = websockets.serve(handle_client, "0.0.0.0", 8765)
+print("server")
+start_server = websockets.serve(handle_client, "13.234.48.112", 8765)
 
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
