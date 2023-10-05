@@ -16,11 +16,13 @@ pq.put((time_, "Task A"))  # Task B arrived second
 time.sleep(1)
 time_ = time.time()
 pq.put((time_, "Task C"))
+array = ["a","b","c","d","e","f","g","h","i","j"]
 async def handle_client(websocket, path):
     try:
         # response = await websocket.recv()
         while True:
-            await websocket.send(str("score"))
+            for x in array:
+                await websocket.send(x)
             # if not pq.empty():
             #     score = pq.get()
             #     print(score)
