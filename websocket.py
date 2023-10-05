@@ -21,7 +21,7 @@ async def handle_client(websocket, path):
     try:
         # response = await websocket.recv()
         while True:
-            # print("score")
+            print("score")
             await websocket.send("str(score)")
             # if not pq.empty():
             #     score = pq.get()
