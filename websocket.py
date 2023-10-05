@@ -24,6 +24,7 @@ async def handle_client(websocket, path):
                 score = pq.get()
                 print(score)
                 await websocket.send(str(score))
+                time.sleep(20)
                 # response = await websocket.recv()
                 # print(response)
     except websockets.exceptions.ConnectionClosedOK:
