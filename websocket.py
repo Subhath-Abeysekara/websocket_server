@@ -34,7 +34,7 @@ async def handle_client(websocket, path):
         print("Client disconnected")
 
 print("server")
-start_server = websockets.serve(handle_client, "ec2-13-235-51-177.ap-south-1.compute.amazonaws.com", 8765)
+start_server = websockets.serve(handle_client, "ec2-13-126-141-226.ap-south-1.compute.amazonaws.com", 8765)
 
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()
