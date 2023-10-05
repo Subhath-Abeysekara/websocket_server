@@ -4,6 +4,7 @@ import websockets
 async def handle_client(websocket, path):
     try:
         while True:
+            await websocket.send(f"Received your message:hi")
             message = await websocket.recv()
             print(f"Received message: {message}")
             user_input = input("Enter Reply: ")
