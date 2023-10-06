@@ -1,10 +1,7 @@
 import asyncio
 import websockets
 import queue
-from cash import get_pq_empty , get_pq
-import threading
 import time
-# Create an empty priority queue
 pq = queue.PriorityQueue()
 
 # Add elements to the priority queue with priorities
