@@ -22,9 +22,8 @@ async def handle_client_(websocket):
 async def handle_client(websocket, path):
     try:
         await websocket.send("Hello")
-        while True:
-            await websocket.send("score")
-
+        # while True:
+        #     await websocket.send("score")
     except websockets.exceptions.ConnectionClosedOK:
         print("Client disconnected")
 
