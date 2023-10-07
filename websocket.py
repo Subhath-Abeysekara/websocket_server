@@ -21,6 +21,7 @@ async def handle_client_(websocket):
 
 async def handle_client(websocket, path):
     try:
+        await websocket.send("Hello")
         while True:
             await websocket.send("score")
 
