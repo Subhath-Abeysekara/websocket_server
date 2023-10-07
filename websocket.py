@@ -22,10 +22,7 @@ async def handle_client_(websocket):
 async def handle_client(websocket, path):
     try:
         while True:
-            print(cash.get_pq_empty())
-            if not cash.get_pq_empty():
-                break
-                # await websocket.send(str(cash.get_pq()))
+            await websocket.send(str(cash.get_pq()))
 
     except websockets.exceptions.ConnectionClosedOK:
         print("Client disconnected")
