@@ -22,7 +22,7 @@ async def handle_client_(websocket):
 async def handle_client(websocket, path):
     try:
         while True:
-            await websocket.send(str(cash.get_pq()))
+            await websocket.send("score")
 
     except websockets.exceptions.ConnectionClosedOK:
         print("Client disconnected")
